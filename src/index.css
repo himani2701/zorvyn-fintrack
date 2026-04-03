@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* nice thin scrollbar that matches the theme */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c4b5fd; border-radius: 4px; }
+.dark ::-webkit-scrollbar-thumb { background: #3b4a6b; }
+
+/* light theme page bg */
+body { background: #f8f7ff; }
+.dark body { background: #0d1117; }
+
+/* gradient for sidebar active item */
+.nav-active {
+  background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
+}
+
+/* card gradient backgrounds for summary cards */
+.card-purple { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); }
+.card-green  { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); }
+.card-red    { background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%); }
+.card-amber  { background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); }
+
+.dark .card-purple { background: linear-gradient(135deg, #1e1b2e 0%, #2a1f4a 100%); }
+.dark .card-green  { background: linear-gradient(135deg, #0f1f14 0%, #14291c 100%); }
+.dark .card-red    { background: linear-gradient(135deg, #1f0f12 0%, #2a141a 100%); }
+.dark .card-amber  { background: linear-gradient(135deg, #1f1a0f 0%, #2a2212 100%); }
+
+/* chart tooltips look better with this */
+.recharts-tooltip-wrapper { z-index: 50 !important; }
